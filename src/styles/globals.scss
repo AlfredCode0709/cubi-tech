@@ -136,10 +136,32 @@
   }
 }
 
+.desktopMainMenu .menuItem, .mobileMainMenu .listItem {
+  display: flex;
+
+  .avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .menuText {
+    font-weight: 500;
+  }
+
+  .listText {
+    font-weight: 600;
+  }
+}
+
 @media (max-width: 899px) {
-  .navbarContainer .mobileAvatar {
+  .navbarContainer .mobileAvatar,
+  .mobileMainMenu .mobileAvatar {
     width: 136px;
     height: 32px;
+  }
+
+  .mobileMainMenu .listItem .avatar {
+    margin-left: 10%;
   }
 
   .footerContainer {
@@ -184,6 +206,14 @@
       transition: all 0.3s ease-in-out;
       opacity: 0.75;
     }
+  }
+
+  .desktopMainMenu .menuItem .avatar {
+    margin-right: 10%;
+  }
+
+  .desktopMainMenu .menuItem .menuText:hover {
+    font-weight: 600;
   }
 
   .footerContainer .cubitechLogo {

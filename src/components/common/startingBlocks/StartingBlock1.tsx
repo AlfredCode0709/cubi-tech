@@ -58,7 +58,9 @@ const StartingBlock1: FC<StartingBlock1Props> = ({
             <span>
               <span className={commonStyles.mobileTitle}>{title}</span>
               <br />
-              <span className={commonStyles.mobileTextDivider}>━━━</span>
+              {textDivider !== 0 && (
+                <span className={commonStyles.mobileTextDivider}>━━━</span>
+              )}
               <br />
               <span className={commonStyles.mobileSubtitle}>{subtitle}</span>
             </span>
