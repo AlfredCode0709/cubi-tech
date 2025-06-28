@@ -3,28 +3,28 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import commonStyles from "@/styles/common.module.scss";
+import styles from "@/styles/home.module.scss";
 import { FC } from "react";
 
 const DesktopView: FC = () => {
   return (
-    <Stack className={commonStyles.content}>
-      <Box className={commonStyles.left}>
+    <Stack className={styles.content}>
+      <Box className={styles.left}>
         <Typography
-          className={commonStyles.title}
+          className={styles.title}
           component={"div"}
           sx={{
             color: "white !important",
           }}
         >
           Get more from Cubitech!
-          <Typography className={commonStyles.subtitle}>
+          <Typography className={styles.subtitle}>
             Boost your points with our loyalty program.
           </Typography>
         </Typography>
 
         <Typography
-          className={commonStyles.descr}
+          className={styles.descr}
           sx={{
             color: "#cee2fd !important",
           }}
@@ -33,7 +33,7 @@ const DesktopView: FC = () => {
         </Typography>
 
         <Button
-          className={commonStyles.learnMoreButton}
+          className={styles.learnMoreButton}
           variant={"contained"}
           size={"large"}
         >
@@ -41,7 +41,7 @@ const DesktopView: FC = () => {
         </Button>
       </Box>
       <Avatar
-        className={commonStyles.avatar}
+        className={styles.avatar}
         alt={"CubiPerk"}
         src={"https://ik.imagekit.io/a1fr3d10/home/block3.svg"}
         variant={"square"}

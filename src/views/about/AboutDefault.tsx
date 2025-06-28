@@ -2,20 +2,18 @@ import Box from "@mui/material/Box";
 import DesktopView from "./DesktopView";
 import MobileView from "./MobileView";
 import ResponsiveView from "@/components/common/ResponsiveView";
-import styles from "@/styles/home.module.scss";
+import styles from "@/styles/about.module.scss";
 import { FC } from "react";
 
-const CubiPerkIntro: FC = () => {
+const AboutDefault: FC = () => {
   return (
-    <Box className={styles.introSection} bgcolor={"primary.main"}>
+    <Box className={`${styles.about}`}>
       <ResponsiveView
         desktop={<DesktopView />}
         mobile={<MobileView />}
-        desktopClassName={"desktop"}
-        mobileClassName={"mobile"}
       />
     </Box>
   );
 };
 
-export default CubiPerkIntro;
+export default AboutDefault;

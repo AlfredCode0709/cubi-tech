@@ -3,41 +3,53 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import MissionStatement from "@/components/common/MissionStatement";
 import StartingBlock1 from "@/components/common/startingBlocks/StartingBlock1";
-import styles from "@/styles/dev.module.scss";
-import { updates } from "@/components/dev/updates";
-import { sections } from "@/components/dev/sections";
+import styles from "@/styles/about.module.scss";
+import { sections } from "@/components/about/sections";
 import { FC, Fragment } from "react";
 
 const MobileView: FC = () => {
   return (
     <Fragment>
-      {/* Starting block of Developer Portal Page */}
+      {/* Starting block of About Page */}
       <StartingBlock1
         bgImage={
-          "https://ik.imagekit.io/a1fr3d10/mobile/dev/block1.png"
+          "https://ik.imagekit.io/a1fr3d10/mobile/about/block1.png"
         }
         overlay={"#00000099"}
         titleFontSize={36}
-        textDivider={0}
+        textDivider={50}
+        subtitleFontSize={28}
         title={
+          <span style={{ lineHeight: 1.4 }}>
+            Journeying
+            <br />
+            together,
+            <br />
+            hand in hand
+          </span>
+        }
+        subtitle={
           <Fragment>
-            Integrate
+            towards endless
             <br />
-            <span style={{ fontSize: 50 }}>━━</span>
-            <br />
-            Innovate
-            <br />
-            <span style={{ fontSize: 50 }}>━━</span>
-            <br />
-            Elevate
+            possibilities.
           </Fragment>
         }
       />
 
       {/* Mission Statement */}
       <MissionStatement>
-        Cubitech – a portfolio showcasing growth and innovation through regular
-        updates.
+        <span
+          style={{ fontSize: 18, display: "inline-block", marginBottom: "5%" }}
+        >
+          Inspired by the Cubitech Vision
+        </span>
+        <br />
+        Our mission is to simplify life
+        <br />
+        through seamless integration of
+        <br />
+        emerging technologies.
       </MissionStatement>
 
       {sections.map((section, index) => (
@@ -52,21 +64,6 @@ const MobileView: FC = () => {
           <Typography className={styles.descr}>{section.descr}</Typography>
         </Stack>
       ))}
-
-      <Stack className={styles.websiteUpdateMobile} bgcolor={"primary.light"}>
-        <Typography className={styles.websiteUpdateHeader}>
-          Website Updates
-        </Typography>
-        {updates.map((update, index) => (
-          <Typography
-            key={index}
-            className={styles.websiteUpdateDescr}
-            sx={{ display: "inline", marginRight: 2 }}
-          >
-            • {update}
-          </Typography>
-        ))}
-      </Stack>
     </Fragment>
   );
 };
