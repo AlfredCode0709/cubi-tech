@@ -4,6 +4,7 @@
   background: var(--footerBgColor);
   color: var(--white);
 
+  /* Desktop Footer Intro Section styles */
   .desktopFooterIntroSection {
     text-align: left;
 
@@ -12,6 +13,17 @@
     }
   }
 
+  /* Desktop Footer Link Section styles */
+  .desktopFooterLinkSection {
+    .title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: var(--h6);
+      margin-bottom: 2%;
+    }
+  }
+
+  /* Mobile Footer Intro Section styles */
   .mobileFooterIntroSection {
     display: flex;
     flex-direction: column;
@@ -20,6 +32,22 @@
 
     .address {
       margin: 5% 0;
+    }
+  }
+
+  /* Mobile Footer Link Section styles */
+  .mobileFooterLinkSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: var(--borderBottom);
+    padding: 5% 0 7.5%;
+
+    .title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: var(--h6);
+      margin-bottom: 5%;
     }
   }
 }

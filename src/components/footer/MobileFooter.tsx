@@ -1,8 +1,10 @@
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import { FC } from "react";
+import { footerSections } from "@/config/footerLinks";
+import { CSSProperties, FC, Fragment } from "react";
 
 const MobileFooter: FC = () => {
   return (
@@ -22,8 +24,60 @@ const MobileFooter: FC = () => {
           for latest updates!
         </Typography>
       </Box>
+
+      {footerSections.map((section, idx) => (
+        <Box
+          className={`mobileFooterLinkSection`}
+          key={section.title}
+          sx={
+            {
+              "--borderBottom":
+                idx !== footerSections.length - 1
+                  ? "1px solid var(--white)"
+                  : "none",
+              ...(idx === 2 && {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }),
+            } as CSSProperties
+          }
+        >
+          <Typography className="title">{section.title}</Typography>
+          {section.title === "Consumers" ? (
+            <Grid container justifyContent={"center"} spacing={2}>
+              {section.links.map((link) => (
+                <Grid size={6} key={link.label}>
+                  <FooterLink href={link.href}>{link.label}</FooterLink>
+                </Grid>
+              ))}
+            </Grid>
+          ) : (
+            <Fragment>
+              {section.links.map((link) => (
+                <FooterLink key={link.label} href={link.href}>
+                  {link.label}
+                </FooterLink>
+              ))}
+            </Fragment>
+          )}
+        </Box>
+      ))}
     </Stack>
   );
 };
 
 export default MobileFooter;
+
+const FooterLink: FC<{ href?: string; children: React.ReactNode }> = ({
+  href,
+  children,
+}) => {
+  return href ? (
+    <Link href={href}>
+      <Typography className="footerLink">{children}</Typography>
+    </Link>
+  ) : (
+    <Typography className="footerLink inactive">{children}</Typography>
+  );
+};
