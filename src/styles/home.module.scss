@@ -1,0 +1,158 @@
+/* Welcome Dialog styles */
+.welcomeDialogDesktop {
+  .link {
+    color: var(--primary-main);
+    font-weight: 500;
+  }
+
+  .dialogTitle {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .dialogActions {
+    padding: 2.5%;
+  }
+
+  @media (min-width: 900px) {
+    .link:hover {
+      transition: all 0.3s ease-in-out;
+      color: var(--primary-dark);
+    }
+  }
+}
+
+.welcomeDialogMobile {
+  .link {
+    color: var(--primary-main);
+    font-weight: 500;
+  }
+
+  .dialogTitle {
+    font-size: 16px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .dialogActions {
+    padding: 5%;
+
+    :global(.MuiButton-root) {
+      width: 35px !important;
+      min-width: 0;
+    }
+  }
+
+  :global(.MuiDialog-paper) {
+    width: 300px !important;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Cubitech Services styles */
+.cubitechServices {
+  background: var(--primary-light);
+  text-align: center;
+
+  .slogan {
+    font-weight: 600;
+    color: var(--primary-main);
+  }
+
+  .brands {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5%;
+  }
+
+  @media (max-width: 899px) {
+    .slogan {
+      font-size: 16px;
+      line-height: var(--h6);
+    }
+
+    .brands {
+      padding: 5%;
+      width: 100%;
+    }
+
+    .gridItem {
+      display: flex;
+      justify-content: center;
+
+      .mobileAvatar {
+        width: 100px;
+        height: 23.5px;
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    .slogan {
+      font-size: 24px;
+      line-height: var(--h5);
+    }
+
+    .brands {
+      gap: 20px;
+      padding: 0;
+    }
+
+    .desktopAvatar {
+      width: 162px;
+      height: 38px;
+
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+/* Peek View styles */
+.peekView {
+  border-bottom: 1px solid var(--divider-color);
+
+  .title {
+    font-family: "Codec Pro Bold", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5;
+    color: var(--primary-main);
+    line-height: var(--h4);
+  }
+
+  @media (max-width: 899px) {
+    .title {
+      font-size: 22px;
+    }
+
+    .carousel {
+      padding: 6.5% 0 5%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .header {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .title {
+        font-size: 28px;
+        letter-spacing: 0.75;
+      }
+    }
+
+    .catalogue {
+      padding: 2.5% 0;
+    }
+  }
+}
