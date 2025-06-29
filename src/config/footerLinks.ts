@@ -19,6 +19,7 @@ export const footerSections: FooterSection[] = [
       { label: "CubiFood", href: "/cubifood" },
       { label: "CubiMart", href: "/cubimart" },
       { label: "CubiRide", href: "/cubiride" },
+      { label: "CubiPay", href: "/cubipay" },
     ],
   },
   {

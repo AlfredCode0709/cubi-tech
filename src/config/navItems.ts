@@ -13,6 +13,7 @@ export const navItems: NavItem[] = [
       cubifood: "https://ik.imagekit.io/a1fr3d10/about_us_cubifood_icon.svg",
       cubimart: "https://ik.imagekit.io/a1fr3d10/about_us_cubimart_icon.svg",
       cubiride: "https://ik.imagekit.io/a1fr3d10/about_us_cubiride_icon.svg",
+      cubipay: "https://ik.imagekit.io/a1fr3d10/about_us_cubipay_icon.svg",
     },
     href: "/about",
     label: "About Us",
@@ -37,5 +38,12 @@ export const navItems: NavItem[] = [
     },
     href: "/cubiride",
     label: "CubiRide",
+  },
+  {
+    avatars: {
+      default: "https://ik.imagekit.io/a1fr3d10/cubipay_icon.svg",
+    },
+    href: "/cubipay",
+    label: "CubiPay",
   },
 ];

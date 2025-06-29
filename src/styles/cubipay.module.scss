@@ -1,0 +1,688 @@
+/* CubiPay Usage styles */
+.cubiPayUsage {
+  background: var(--primary-light);
+  color: var(--primary-main);
+
+  .header {
+    font-weight: 500;
+    line-height: var(--h6);
+  }
+
+  .title {
+    font-weight: 600;
+    line-height: var(--h5);
+  }
+
+  .descr {
+    font-weight: 500;
+    line-height: var(--body1);
+    color: var(--primary-dark);
+  }
+
+  .paymentFlow,
+  .transactionReplayFlow {
+    background: #d9d9d9;
+    border-radius: 8px;
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+  }
+
+  @media (max-width: 899px) {
+    .stackContainer {
+      width: 100%;
+      text-align: center;
+
+      .header {
+        font-size: 18px;
+        margin-bottom: 5%;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5% 0;
+
+        .title {
+          font-size: 16px;
+          margin-bottom: 5%;
+        }
+
+        .descr {
+          font-size: 14px;
+          margin-bottom: 7.5%;
+        }
+
+        .paymentFlow,
+        .transactionReplayFlow {
+          width: 275px;
+          height: 275px;
+
+          .container .card {
+            padding: 5%;
+            height: 250px;
+            width: 250px;
+
+            /* QR Code Scanning styles */
+            .qrContainer {
+              width: 175px;
+              height: 175px;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+              animation: zoomAnimation 3s ease-out forwards;
+
+              .qrIcon {
+                width: 100%;
+                height: 100%;
+              }
+
+              .scanningShadow {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 25%;
+                background: #0058cc7f;
+                animation: scanAnimation 3s ease-in-out forwards;
+              }
+            }
+
+            .scanningText {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: var(--h6);
+              margin-top: 2.5%;
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+            }
+
+            /* Payment Amount Auto Input styles */
+            .typingText {
+              display: flex;
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+
+              .amountText {
+                font-weight: 500;
+                font-size: 32px;
+                margin-top: -2.5%;
+              }
+            }
+
+            .userCard {
+              margin: 10% 0;
+              padding: 2.5%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+
+              .name {
+                font-size: 14px;
+              }
+            }
+
+            .sendButton {
+              position: relative;
+              width: 100%;
+              height: 60px;
+              background: var(--primary-main);
+              border-radius: 30px;
+              text-align: center;
+              overflow: hidden;
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+
+              .sendText {
+                color: var(--white);
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: var(--h6);
+                transform: translateY(-50%);
+                transition: opacity 0.5s;
+              }
+
+              .arrowBox {
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                width: 50px;
+                height: 50px;
+                background: var(--white);
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateY(-50%);
+                animation: none;
+
+                &.arrowSlide {
+                  animation: slideAnimation2 0.5s forwards;
+                }
+
+                .arrowForwardIcon {
+                  color: var(--primary-main);
+                }
+              }
+            }
+
+            /* Payment Success / Payment Success Replay styles */
+            .iconBox {
+              width: 50px;
+              height: 50px;
+              position: relative;
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+
+              .checkCircleIcon {
+                width: 100%;
+                height: 100%;
+                color: var(--primary-main);
+              }
+            }
+
+            .successText {
+              font-weight: 500;
+              font-size: 16px;
+              color: var(--primary-main);
+              line-height: var(--h6);
+              margin: 2.5% 0;
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+            }
+
+            .amountText {
+              display: flex;
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+
+              .amountValue {
+                font-weight: 500;
+                font-size: 32px;
+                margin-top: -3%;
+              }
+            }
+
+            .userInfo,
+            .payeeInfo {
+              padding: 3%;
+              margin-top: 5%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              border-top: 1px solid var(--divider-color);
+              animation: fadeIn 0.5s ease-out;
+              transition: opacity 0.5s;
+
+              .name {
+                font-size: 14px;
+              }
+            }
+
+            /* Transaction History styles */
+            .transactionHistoryTitle {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: var(--h6);
+              margin-bottom: 7.5%;
+              animation: fadeIn 0.5s ease-out forwards;
+              transition: opacity 0.5s;
+            }
+
+            .transactionRow {
+              padding: 5% 0;
+              border-bottom: 1px solid var(--divider-color);
+
+              .payeeLabel {
+                text-align: left;
+
+                .text {
+                  font-size: 14px;
+                  transition: transform 0.3s ease;
+                }
+
+                .zoomEffect {
+                  transform: scale(0.9);
+                }
+              }
+
+              .amountLabel {
+                text-align: right;
+
+                .text {
+                  font-size: 14px;
+                  font-weight: 600;
+                  transition: transform 0.3s ease;
+                }
+
+                .zoomEffect {
+                  transform: scale(0.9);
+                }
+              }
+
+              .arrowOption {
+                text-align: right;
+
+                .arrowForwardIcon {
+                  display: flex;
+                  margin: 4px 5px 5px;
+                  font-size: 12px;
+                  color: var(--text-secondary-main);
+                }
+
+                .zoomEffect {
+                  transform: scale(0.9);
+                }
+              }
+            }
+
+            /* Zoomed In Transaction styles */
+            .transactionDetailsTitle {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: var(--h6);
+              margin: 7.5% 0;
+              animation: fadeIn 0.5s ease-out forwards;
+              transition: opacity 0.5s;
+            }
+
+            .transactionAmountData {
+              display: flex;
+              justify-content: right;
+
+              .amountValue {
+                font-weight: 500;
+                font-size: 32px;
+                margin-top: -1.25%;
+                margin-left: 1.25%;
+              }
+            }
+
+            .gridRow {
+              border-bottom: 1px solid var(--divider-color);
+              padding: 5% 0;
+
+              .leftText {
+                text-align: left;
+              }
+
+              .rightText {
+                text-align: right;
+
+                .arrowForwardIcon {
+                  display: flex;
+                  margin: 5px 25px 5px 25px;
+                  font-size: 12px;
+                }
+              }
+
+              .leftText .text, .rightText .text {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    .header {
+      font-size: 22px;
+      margin-bottom: 2.5%;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2.5% 0;
+
+      .leftContent {
+        width: 45%;
+
+        .title {
+          font-size: 24px;
+          margin-bottom: 2.5%;
+        }
+
+        .descr {
+          font-size: 18px;
+        }
+      }
+
+      .rightContent {
+        width: 45%;
+
+        .paymentFlow,
+        .transactionReplayFlow {
+          height: 350px;
+
+          .container {
+            padding: 2.5% 0;
+
+            .card {
+              padding: 5%;
+              height: 300px;
+              width: 300px;
+
+              /* QR Code Scanning styles */
+              .qrContainer {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                animation: zoomAnimation 3s ease-out forwards;
+
+                .qrIcon {
+                  width: 100%;
+                  height: 100%;
+                }
+
+                .scanningShadow {
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                  height: 25%;
+                  background: #0058cc7f;
+                  animation: scanAnimation 3s ease-in-out forwards;
+                }
+              }
+
+              .scanningText {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: var(--h6);
+                margin-top: 2.5%;
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+              }
+
+              /* Payment Amount Auto Input styles */
+              .typingText {
+                display: flex;
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+
+                .amountText {
+                  font-weight: 500;
+                  font-size: 40px;
+                }
+              }
+
+              .userCard {
+                margin: 10% 0;
+                padding: 5%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+              }
+
+              .sendButton {
+                position: relative;
+                width: 100%;
+                height: 60px;
+                background: var(--primary-main);
+                border-radius: 30px;
+                text-align: center;
+                overflow: hidden;
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+
+                .sendText {
+                  color: var(--white);
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  top: 50%;
+                  font-weight: 500;
+                  font-size: 20px;
+                  line-height: var(--h6);
+                  transform: translateY(-50%);
+                  transition: opacity 0.5s;
+                }
+
+                .arrowBox {
+                  position: absolute;
+                  top: 50%;
+                  left: 5px;
+                  width: 50px;
+                  height: 50px;
+                  background: var(--white);
+                  border-radius: 25px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  transform: translateY(-50%);
+                  animation: none;
+
+                  &.arrowSlide {
+                    animation: slideAnimation1 0.5s forwards;
+                  }
+
+                  .arrowForwardIcon {
+                    color: var(--primary-main);
+                  }
+                }
+              }
+
+              /* Payment Success / Payment Success Replay styles */
+              .iconBox {
+                width: 75px;
+                height: 75px;
+                position: relative;
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+
+                .checkCircleIcon {
+                  width: 100%;
+                  height: 100%;
+                  color: var(--primary-main);
+                }
+              }
+
+              .successText {
+                font-weight: 500;
+                font-size: 20px;
+                color: var(--primary-main);
+                line-height: var(--h6);
+                margin: 5% 0;
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+              }
+
+              .amountText {
+                display: flex;
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+
+                .amountValue {
+                  font-size: 40px;
+                  font-weight: 500;
+                }
+              }
+
+              .userInfo,
+              .payeeInfo {
+                padding: 3%;
+                margin-top: 5%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-top: 1px solid var(--divider-color);
+                animation: fadeIn 0.5s ease-out;
+                transition: opacity 0.5s;
+              }
+
+              /* Transaction History styles */
+              .transactionHistoryTitle {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: var(--h6);
+                margin-bottom: 7.5%;
+                animation: fadeIn 0.5s ease-out forwards;
+                transition: opacity 0.5s;
+              }
+
+              .transactionRow {
+                padding: 7.5% 0;
+                border-bottom: 1px solid var(--divider-color);
+
+                .payeeLabel {
+                  text-align: left;
+
+                  .text {
+                    transition: transform 0.3s ease;
+                  }
+
+                  .zoomEffect {
+                    transform: scale(0.9);
+                  }
+                }
+
+                .amountLabel {
+                  text-align: right;
+
+                  .text {
+                    transition: transform 0.3s ease;
+                    font-weight: 600;
+                  }
+
+                  .zoomEffect {
+                    transform: scale(0.9);
+                  }
+                }
+
+                .arrowOption {
+                  text-align: right;
+
+                  .arrowForwardIcon {
+                    font-size: 14px;
+                    color: var(--text-secondary-main);
+                  }
+
+                  .zoomEffect {
+                    transform: scale(0.9);
+                  }
+                }
+              }
+
+              /* Zoomed In Transaction styles */
+              .transactionDetailsTitle {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: var(--h6);
+                margin-bottom: 7.5%;
+                animation: fadeIn 0.5s ease-out forwards;
+                transition: opacity 0.5s;
+              }
+
+              .transactionAmountData {
+                display: flex;
+                justify-content: right;
+
+                .amountValue {
+                  font-weight: 500;
+                  font-size: 40px;
+                }
+              }
+
+              .gridRow {
+                border-bottom: 1px solid var(--divider-color);
+                padding: 7.5% 0;
+
+                .leftText {
+                  text-align: left;
+                }
+
+                .rightText {
+                  text-align: right;
+
+                  .arrowForwardIcon {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Keyframe for zooming in from 0 to 100% size */
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframe for scanning shadow that only covers 30% of the height */
+@keyframes scanAnimation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideAnimation1 {
+  0% {
+    left: 1%;
+  }
+  100% {
+    left: 77.5%;
+  }
+}
+
+@keyframes slideAnimation2 {
+  0% {
+    left: 1%;
+  }
+  100% {
+    left: 75%;
+  }
+}

@@ -2,6 +2,7 @@ import CubitechLogo from "@/logos/CubitechLogo";
 import CubiFoodLogo from "@/logos/CubiFoodLogo";
 import CubiMartLogo from "@/logos/CubiMartLogo";
 import CubiRideLogo from "@/logos/CubiRideLogo";
+import CubiPayLogo from "@/logos/CubiPayLogo";
 import { ReactNode } from "react";
 
 export interface BrandConfig {
@@ -86,11 +87,28 @@ export const brands: Record<string, BrandConfig> = {
     lightLogo: <CubiRideLogo colorMode="light" />,
     avatarKey: "cubiride",
   },
+  cubipay: {
+    id: "cubipay",
+    name: "CubiPay",
+    appBarBgColor: "#2e9eb8",
+    desktopMainMenuBgColor: "#ebf7fa",
+    desktopMainMenuColor: "#2e9eb8",
+    desktopMainMenuHoverBgColor: "#c2e7f0",
+    desktopMainMenuHoverColor: "#247b8f",
+    mobileMainMenuBgColor: "#ebf7fa",
+    mobileMainMenuColor: "#2e9eb8",
+    footerBgColor: "#247b8f",
+    footerHoverColor: "#d6eff5",
+    darkLogo: <CubiPayLogo colorMode="dark" />,
+    lightLogo: <CubiPayLogo colorMode="light" />,
+    avatarKey: "cubipay",
+  },
 };
 
 export const getBrandByPath = (path: string): BrandConfig => {
   if (path.startsWith("/cubifood")) return brands.cubifood;
   if (path.startsWith("/cubimart")) return brands.cubimart;
   if (path.startsWith("/cubiride")) return brands.cubiride;
+  if (path.startsWith("/cubipay")) return brands.cubipay;
   return brands.cubitech;
 };
