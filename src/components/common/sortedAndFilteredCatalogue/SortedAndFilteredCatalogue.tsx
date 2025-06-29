@@ -7,22 +7,22 @@ import { CSSProperties, FC } from "react";
 
 interface SortedAndFilterCatalogueProps {
   imageSrc: string;
-  numberOfShops: number | 0;
   numberOfItems: number | 0;
+  brand: string;
 }
 
 const SortedAndFilterCatalogue: FC<SortedAndFilterCatalogueProps> = ({
   imageSrc,
-  numberOfShops,
   numberOfItems,
+  brand,
 }) => {
   const paginationColour =
-    numberOfShops !== 0
+    brand === "CubiFood"
       ? commonStyles.paginationColour1
       : commonStyles.paginationColour2;
 
   const style: CSSProperties = {
-    "--titleColor": numberOfShops !== 0 ? "#08834e" : "#c03853",
+    "--titleColor": brand === "CubiFood" ? "#08834e" : "#c03853",
   } as CSSProperties;
 
   return (
@@ -32,15 +32,15 @@ const SortedAndFilterCatalogue: FC<SortedAndFilterCatalogueProps> = ({
           <DesktopView
             paginationColour={paginationColour}
             imageSrc={imageSrc}
-            numberOfShops={numberOfShops}
             numberOfItems={numberOfItems}
+            brand={brand}
           />
         }
         mobile={
           <MobileView
             imageSrc={imageSrc}
-            numberOfShops={numberOfShops}
             numberOfItems={numberOfItems}
+            brand={brand}
           />
         }
         desktopClassName={'desktop'}

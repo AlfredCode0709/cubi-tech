@@ -6,19 +6,16 @@ import { FC, Fragment } from "react";
 
 interface MobileViewProps {
   imageSrc: string;
-  numberOfShops: number | 0;
   numberOfItems: number | 0;
+  brand?: string;
 }
 
 const MobileView: FC<MobileViewProps> = ({
   imageSrc,
-  numberOfShops,
   numberOfItems,
+  brand,
 }) => {
-  const allItems = Array.from(
-    { length: numberOfShops | numberOfItems },
-    (_, i) => i + 1
-  );
+  const allItems = Array.from({ length: numberOfItems }, (_, i) => i + 1);
 
   return (
     <Fragment>
@@ -32,13 +29,9 @@ const MobileView: FC<MobileViewProps> = ({
           <SwiperSlide key={globalIndex} style={{ width: 150 }}>
             <ItemCard
               cardImage={imageSrc}
-              name={
-                numberOfShops
-                  ? `Shop Name ${globalIndex}`
-                  : `Item Name ${globalIndex}`
-              }
-              price={numberOfShops ? 0 : 9.99}
-              brand={numberOfShops ? "CUBIFood" : "CUBIMart"}
+              name={`Item Name ${globalIndex}`}
+              price={9.99}
+              brand={brand}
             />
           </SwiperSlide>
         ))}
