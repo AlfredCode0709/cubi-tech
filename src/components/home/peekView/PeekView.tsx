@@ -9,10 +9,12 @@ export const titleConfig = {
   CUBIFood: {
     path: "https://ik.imagekit.io/a1fr3d10/cubifood_light.svg",
     color: "#09b96d",
+    link: '/cubifood'
   },
   CUBIMart: {
     path: "https://ik.imagekit.io/a1fr3d10/cubimart_light.svg",
     color: "#bf3953",
+    link: '/cubimart'
   },
 } as const;
 

@@ -1,6 +1,8 @@
 import Fab from "@mui/material/Fab";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import Zoom from "@mui/material/Zoom";
 import { styled } from "@mui/material/styles";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 const FabStyled = styled(Fab)(({ theme }) => ({
   position: "fixed",
@@ -14,26 +16,33 @@ interface ScrollTopFabProps {
 }
 
 const ScrollTopFab = ({ fabColor }: ScrollTopFabProps) => {
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <FabStyled
-      aria-label="scroll back to top"
-      onClick={handleClick}
-      sx={
-        fabColor
-          ? {
-              bgcolor: fabColor,
-              color: "#fff",
-              "&:hover": { bgcolor: fabColor },
-            }
-          : {}
-      }
-    >
-      <ArrowDropUpIcon fontSize={"large"} />
-    </FabStyled>
+    <Zoom in={trigger}>
+      <FabStyled
+        aria-label="scroll back to top"
+        onClick={handleClick}
+        sx={
+          fabColor
+            ? {
+                bgcolor: fabColor,
+                color: "#fff",
+                "&:hover": { bgcolor: fabColor },
+              }
+            : {}
+        }
+      >
+        <ArrowDropUpIcon fontSize={"large"} />
+      </FabStyled>
+    </Zoom>
   );
 };
 
