@@ -1,0 +1,58 @@
+export const categories = [
+  {
+    name: "beverage",
+    label: "Beverage",
+    text: "Beverage",
+    mobileText: "Beverage",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/beverage.svg",
+  },
+  {
+    name: "indian",
+    label: "Indian",
+    text: "Indian",
+    mobileText: "Indian",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/indian.svg",
+  },
+  {
+    name: "chinese",
+    label: "Chinese",
+    text: "Chinese",
+    mobileText: "Chinese",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/chinese.svg",
+  },
+  {
+    name: "japanese",
+    label: "Japanese",
+    text: "Japanese",
+    mobileText: "Japanese",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/japanese.svg",
+  },
+  {
+    name: "korean",
+    label: "Korean",
+    text: "Korean",
+    mobileText: "Korean",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/korean.svg",
+  },
+  {
+    name: "malay",
+    label: "Malay",
+    text: "Malay",
+    mobileText: "Malay",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/malay.svg",
+  },
+  {
+    name: "thai",
+    label: "Thai",
+    text: "Thai",
+    mobileText: "Thai",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/thai.svg",
+  },
+  {
+    name: "western",
+    label: "Western",
+    text: "Western",
+    mobileText: "Western",
+    src: "https://ik.imagekit.io/a1fr3d10/cubifood/western.svg",
+  },
+];
