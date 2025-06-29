@@ -84,8 +84,8 @@ const MobileView: FC = () => {
         <SortedAndFilterCatalogue
           key={imageSrc}
           imageSrc={imageSrc}
-          numberOfShops={18}
-          numberOfItems={0}
+          numberOfItems={18}
+          brand={"CubiFood"}
         />
       ) : (
         <NearbyOutlets numberOfStalls={10} />
