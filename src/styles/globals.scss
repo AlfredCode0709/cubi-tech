@@ -42,6 +42,7 @@
 .infoCard,
 .itemCard {
   overflow: hidden;
+  height: var(--treasureCardHeight);
 
   .chipData {
     background: #e7fef4;
@@ -67,6 +68,19 @@
       font-weight: 400;
       line-height: var(--body1);
       font-size: 10px;
+      color: var(--text-secondary-main);
+    }
+
+    .treasureTitle {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: var(--h6);
+      margin-bottom: 5%;
+    }
+
+    .treasureDescr {
+      font-size: 12px;
+      line-height: var(--body1);
       color: var(--text-secondary-main);
     }
 
@@ -108,6 +122,15 @@
       }
     }
   }
+
+  .viewTreasureButton,
+  .learnTreasureButton {
+    color: #08834e;
+
+    &:hover {
+      background: #e7fef4;
+    }
+  }
 }
 
 /* Join Section styles */
@@ -136,7 +159,8 @@
   }
 }
 
-.desktopMainMenu .menuItem, .mobileMainMenu .listItem {
+.desktopMainMenu .menuItem,
+.mobileMainMenu .listItem {
   display: flex;
 
   .avatar {
@@ -171,6 +195,12 @@
       font-size: 26px;
       letter-spacing: 1.5;
     }
+  }
+
+  .mobileFooterLinkSection .footerLink:hover {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: var(--hoverColor);
   }
 
   .joinSection {
@@ -238,6 +268,14 @@
 
     .descr {
       font-size: 14px;
+    }
+
+    .treasureTitle {
+      font-size: var(--nameFontSize);
+    }
+
+    .treasureDescr {
+      font-size: var(--descrFontSize);
     }
 
     .itemName {

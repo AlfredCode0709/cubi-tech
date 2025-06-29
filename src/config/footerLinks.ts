@@ -14,6 +14,10 @@ export const footerSections: FooterSection[] = [
     links: [{ label: "About Us", href: "/about" }],
   },
   {
+    title: "Consumers",
+    links: [{ label: "CubiFood", href: "/cubifood" }],
+  },
+  {
     title: "For Developers",
     links: [{ href: "/dev", label: "Developer Portal" }],
   },
