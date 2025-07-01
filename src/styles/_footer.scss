@@ -4,12 +4,49 @@
   background: var(--footerBgColor);
   color: var(--white);
 
+  .cubitechLogo {
+    font-family: "Codec Pro Bold", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5;
+  }
+
+  .footerLink {
+    font-size: 16px;
+    line-height: var(--body1);
+    color: inherit;
+
+    &.inactive {
+      color: var(--disable-main);
+      pointer-events: none;
+    }
+  }
+
   /* Desktop Footer Intro Section styles */
   .desktopFooterIntroSection {
     text-align: left;
 
+    .cubitechLogo {
+      font-size: 30px;
+    }
+
     .address {
       margin: 7.5% 0;
+    }
+  }
+
+  /* Desktop Footer Link Section styles */
+  .desktopFooterLinkSection {
+    .title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: var(--h6);
+      margin-bottom: 2%;
+    }
+
+    .footerLink:hover {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      color: var(--hoverColor);
     }
   }
 
@@ -18,10 +55,31 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 7.5% 0;
+    padding: 7.5% 0 10%;
+    border-bottom: 1px solid var(--white);
+
+    .cubitechLogo {
+      font-size: 26px;
+    }
 
     .address {
       margin: 5% 0;
+    }
+  }
+
+  /* Mobile Footer Link Section styles */
+  .mobileFooterLinkSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: var(--borderBottom);
+    padding: 7.5% 0;
+
+    .title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: var(--h6);
+      margin-bottom: 5%;
     }
   }
 }

@@ -16,35 +16,223 @@
   padding-top: 80px;
 }
 
-@media (max-width: 899px) {
-  .navbarContainer .mobileAvatar {
-    width: 136px;
-    height: 32px;
+/* Card Media Container styles */
+.cardMediaContainer {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+
+  .cardMedia {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Infographic and Item Card styles */
+.infoCard,
+.itemCard {
+  overflow: hidden;
+  height: var(--treasureCardHeight);
+
+  .chipData {
+    background: #e7fef4;
+    color: #066039;
+    font-weight: 500;
   }
 
-  .footerContainer .cubitechLogo {
-    font-family: "Codec Pro Bold", sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    letter-spacing: 1.5;
+  .otherText {
+    color: var(--text-secondary-main);
+  }
+
+  .contentData {
+    border-top: 1px solid var(--divider-color);
+
+    .title {
+      font-weight: 500;
+      line-height: var(--h6);
+      font-size: 12px;
+      margin-bottom: 10%;
+    }
+
+    .descr {
+      font-weight: 400;
+      line-height: var(--body1);
+      font-size: 10px;
+      color: var(--text-secondary-main);
+    }
+
+    .treasureTitle {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: var(--h6);
+      margin-bottom: 5%;
+    }
+
+    .treasureDescr {
+      font-size: 12px;
+      line-height: var(--body1);
+      color: var(--text-secondary-main);
+    }
+
+    .itemName {
+      font-weight: 500;
+      line-height: var(--h6);
+      font-size: 12px;
+      margin-bottom: 15%;
+    }
+
+    .itemPrice {
+      font-weight: 400;
+      line-height: var(--body1);
+      font-size: 12px;
+      color: var(--text-secondary-main);
+    }
+
+    .mobileFollowerData {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      color: #c03853;
+
+      .peopleAltIcon {
+        color: #c03853;
+      }
+    }
+
+    .mobileRatingView {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      color: var(--primary-dark);
+      margin-top: 15%;
+
+      .starIcon,
+      .ratingScore {
+        color: var(--warning-light);
+      }
+    }
+  }
+
+  .viewTreasureButton,
+  .learnTreasureButton {
+    color: #08834e;
+
+    &:hover {
+      background: #e7fef4;
+    }
+  }
+}
+
+/* Join Section styles */
+.joinSection {
+  .title {
+    font-weight: 600;
+    line-height: var(--h4);
+    color: var(--primary-main);
+  }
+
+  .descr {
+    line-height: var(--subtitle2);
+    color: var(--primary-dark);
+  }
+}
+
+@media (max-width: 899px) {
+  .joinSection {
+    padding: 2.5% 0;
+
+    .content {
+      text-align: center;
+
+      .title {
+        font-size: 20px;
+        margin-bottom: 4%;
+      }
+
+      .descr {
+        font-size: 14px;
+        margin-bottom: 8%;
+      }
+    }
+
+    button {
+      width: auto;
+      align-self: center;
+    }
   }
 }
 
 @media (min-width: 900px) {
-  .navbarContainer .desktopAvatar {
-    width: 170px;
-    height: 40px;
+  .infoCard .contentData,
+  .itemCard .contentData {
+    .title {
+      font-size: 18px;
+      margin-bottom: 5%;
+    }
 
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      opacity: 0.75;
+    .descr {
+      font-size: 14px;
+    }
+
+    .treasureTitle {
+      font-size: var(--nameFontSize);
+    }
+
+    .treasureDescr {
+      font-size: var(--descrFontSize);
+    }
+
+    .itemName {
+      font-size: 16px;
+      margin-bottom: 10%;
+    }
+
+    .itemPrice {
+      font-size: 16px;
+    }
+
+    .desktopFollowerData {
+      font-size: 16px;
+      color: var(--text-secondary-main);
+    }
+
+    .desktopRatingView {
+      margin-top: 10%;
     }
   }
 
-  .footerContainer .cubitechLogo {
-    font-family: "Codec Pro Bold", sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    letter-spacing: 1.5;
+  .infoCard:hover,
+  .itemCard:hover {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px #00000026;
+  }
+
+  .joinSection .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+
+    .left {
+      flex: 1;
+      text-align: left;
+
+      .title {
+        font-size: 30px;
+        margin-bottom: 2%;
+      }
+
+      .descr {
+        font-size: 20px;
+      }
+    }
   }
 }

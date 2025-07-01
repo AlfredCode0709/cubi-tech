@@ -1,3 +1,5 @@
+import WelcomeDialog from "@/components/home/welcomeDialog/WelcomeDialog";
+import HomeDefault from "@/views/home/HomeDefault";
 import Head from "next/head";
 import { FC, Fragment } from "react";
 
@@ -13,7 +15,10 @@ const Home: FC = () => {
           href="https://ik.imagekit.io/a1fr3d10/cubitech.ico?updatedAt=1748148047180"
         />
       </Head>
-      <main></main>
+      <main>
+        <WelcomeDialog />
+        <HomeDefault />
+      </main>
     </Fragment>
   );
 };

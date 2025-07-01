@@ -7,4 +7,98 @@
     justify-content: center;
     background: var(--appBarBgColor);
   }
+
+  .desktopAvatar {
+    width: 170px;
+    height: 40px;
+  }
+
+  .mobileAvatar {
+    width: 136px;
+    height: 32px;
+  }
+
+  @media (min-width: 900px) {
+    .desktopAvatar:hover {
+      transition: all 0.3s ease-in-out;
+      opacity: 0.75;
+    }
+  }
+}
+
+/* Main Menu styles */
+.desktopMainMenu {
+  /* MUI Menu Paper styles */
+  .MuiMenu-paper {
+    background: var(--desktopMainMenuBgColor);
+    color: var(--desktopMainMenuColor);
+    width: 150px;
+    margin-top: 16px;
+  }
+
+  .menuItem {
+    display: flex;
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+      margin-right: 10%;
+    }
+
+    .menuText {
+      font-weight: 500;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .MuiMenuItem-root:hover {
+      background: var(--desktopMainMenuHoverBgColor);
+      color: var(--desktopMainMenuHoverColor);
+      transition: all 0.3s ease-in-out;
+
+      .menuText:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.mobileMainMenu {
+  .header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileAvatar {
+    width: 136px;
+    height: 32px;
+  }
+
+  /* MUI Drawer Paper styles */
+  .MuiDrawer-paper {
+    background: var(--mobileMainMenuBgColor);
+    color: var(--mobileMainMenuColor);
+    width: 250px;
+  }
+
+  .listItem {
+    display: flex;
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+      margin-left: 10%;
+    }
+
+    .listText {
+      font-weight: 600;
+    }
+  }
+
+  /* MUI List Item styles */
+  .MuiListItem-root {
+    padding: 0;
+  }
 }

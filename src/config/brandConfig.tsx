@@ -38,5 +38,6 @@ export const brands: Record<string, BrandConfig> = {
 };
 
 export const getBrandByPath = (path: string): BrandConfig => {
+  if (path.startsWith("/")) return brands.cubitech;
   return brands.cubitech;
 };

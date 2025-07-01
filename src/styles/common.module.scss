@@ -1,0 +1,161 @@
+/* Starting block 1 styles */
+.startingBlock1 {
+  background: var(--bgImage) var(--bgPosition) / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin-top: -80px;
+
+  /* Semi-transparent dark overlay */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    z-index: 0;
+  }
+
+  .text {
+    font-weight: 600;
+    line-height: var(--h1);
+    color: var(--white);
+    margin: 33% auto 0;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    .desktopTitle {
+      font-size: 54px;
+    }
+
+    .mobileTitle {
+      font-size: var(--titleFontSize);
+    }
+
+    .mobileTextDivider {
+      font-size: var(--textDivider);
+    }
+
+    .mobileSubtitle {
+      font-size: var(--subtitleFontSize);
+      line-height: var(--subtitle2);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .text {
+      width: 80%;
+      text-align: left !important;
+    }
+  }
+}
+
+/* Mission Statement styles */
+.missionStatement {
+  background: var(--primary-main);
+  color: var(--white);
+
+  .text {
+    font-weight: 500;
+    line-height: var(--h5);
+  }
+
+  @media (max-width: 899px) {
+    padding: 7.5%;
+
+    .text {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 900px) {
+    padding: 2% 10%;
+
+    .text {
+      font-size: 24px;
+      text-align: left;
+    }
+  }
+}
+
+/* Promotion styles */
+.promotions {
+  background: var(--bgColor);
+  color: var(--color);
+  border-bottom: 1px solid var(--divider-color);
+
+  .header {
+    font-weight: 600;
+  }
+
+  @media (max-width: 899px) {
+    .header {
+      font-size: 18px;
+    }
+
+    .carousel {
+      padding: 7.5% 0 5%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .header {
+      font-size: 26px;
+    }
+
+    .content {
+      padding: 2.5% 0;
+    }
+  }
+}
+
+/* Pagination Colours styles */
+.paginationColour1 {
+  :global(.MuiPaginationItem-root) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  :global(.MuiPaginationItem-previousNext) {
+    color: #08834e;
+    &:hover {
+      background: #08834e;
+      color: var(--white);
+    }
+    &:disabled {
+      background: transparent;
+      color: var(--disable-main);
+    }
+  }
+}
+
+.paginationColour2 {
+  :global(.MuiPaginationItem-root) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  :global(.MuiPaginationItem-previousNext) {
+    color: #c03853;
+    &:hover {
+      background: #c03853;
+      color: var(--white);
+    }
+    &:disabled {
+      background: transparent;
+      color: var(--disable-main);
+    }
+  }
+}

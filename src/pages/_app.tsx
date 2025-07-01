@@ -1,4 +1,6 @@
 import "@/styles/globals.scss";
+import "swiper/css";
+import "swiper/css/pagination";
 import Layout from "@/components/Layout";
 import { createDynamicTheme } from "@/styles/theme";
 import { ThemeProvider } from "@mui/material";
