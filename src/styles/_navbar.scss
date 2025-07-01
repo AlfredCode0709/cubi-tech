@@ -1,0 +1,10 @@
+/* Navbar container styles */
+.navbarContainer {
+  display: flex;
+
+  /* AppBar styles */
+  .appBar {
+    justify-content: center;
+    background: var(--appBarBgColor);
+  }
+}

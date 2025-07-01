@@ -1,0 +1,27 @@
+/* Footer container styles */
+.footerContainer {
+  padding: 3% 5%;
+  background: var(--footerBgColor);
+  color: var(--white);
+
+  /* Desktop Footer Intro Section styles */
+  .desktopFooterIntroSection {
+    text-align: left;
+
+    .address {
+      margin: 7.5% 0;
+    }
+  }
+
+  /* Mobile Footer Intro Section styles */
+  .mobileFooterIntroSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 7.5% 0;
+
+    .address {
+      margin: 5% 0;
+    }
+  }
+}

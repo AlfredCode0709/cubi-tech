@@ -1,0 +1,50 @@
+@use "./reset";
+@use "./colours";
+@use "./typography";
+@use "./navbar";
+@use "./footer";
+
+.desktop {
+  padding: 2.5% 10%;
+}
+
+.mobile {
+  padding: 7.5%;
+}
+
+.layout {
+  padding-top: 80px;
+}
+
+@media (max-width: 899px) {
+  .navbarContainer .mobileAvatar {
+    width: 136px;
+    height: 32px;
+  }
+
+  .footerContainer .cubitechLogo {
+    font-family: "Codec Pro Bold", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 1.5;
+  }
+}
+
+@media (min-width: 900px) {
+  .navbarContainer .desktopAvatar {
+    width: 170px;
+    height: 40px;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      opacity: 0.75;
+    }
+  }
+
+  .footerContainer .cubitechLogo {
+    font-family: "Codec Pro Bold", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 1.5;
+  }
+}
