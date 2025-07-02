@@ -14,6 +14,24 @@
 
 .layout {
   padding-top: 80px;
+
+  .scrollTopFab {
+    background: var(--fabBgColor);
+    color: var(--white);
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1200;
+
+    &:hover {
+      background: var(--fabBgColor);
+      color: var(--white);
+    }
+  }
+}
+
+.sloganText {
+  font-style: italic;
 }
 
 /* Card Media Container styles */

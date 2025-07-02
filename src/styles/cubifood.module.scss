@@ -1,0 +1,174 @@
+/* Treasures styles */
+.treasures {
+  background: #08834e;
+  color: var(--white);
+
+  .header {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: var(--h5);
+    text-align: center;
+  }
+
+  @media (max-width: 899px) {
+    .header {
+      font-size: 24px;
+    }
+
+    .carousel {
+      padding: 7.5% 0 2.5%;
+
+      :global(.swiper-pagination) {
+        position: static;
+        margin-top: 10%;
+        text-align: center;
+      }
+
+      :global(.swiper-pagination-bullet) {
+        background: #066039;
+        opacity: 0.5;
+      }
+
+      :global(.swiper-pagination-bullet-active) {
+        background: #e7fef4;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    .header {
+      font-size: 32px;
+    }
+
+    .treasuresView {
+      padding: 2.5% 0;
+    }
+  }
+}
+
+/* Nearby Outlets styles */
+.nearbyOutlets {
+  color: #08834e;
+  border-top: 1px solid var(--divider-color);
+
+  .title {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: var(--h3);
+  }
+
+  .outletName {
+    font-weight: 500;
+    line-height: var(--h5);
+  }
+
+  .outletViewButton {
+    color: #08834e;
+  }
+
+  .distance {
+    color: var(--text-secondary-main);
+  }
+
+  .avatar {
+    background: #e7fef4;
+  }
+
+  @media (max-width: 899px) {
+    .title {
+      font-size: 18px;
+    }
+
+    .outletSection {
+      padding: 5% 0;
+
+      .outletRowHeader {
+        padding: 5% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftSection {
+          gap: 8px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .outletName {
+            font-size: 12px;
+          }
+
+          .avatar {
+            width: 40px;
+            height: 40px;
+            padding: 5%;
+          }
+        }
+
+        .rightSection {
+          gap: 2px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .distance {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 900px) {
+    .title {
+      font-size: 26px;
+      padding: 4.5px 0;
+      // background: lightskyblue;
+    }
+
+    .outletSection {
+      padding: 2.5% 0;
+
+      .outletRowHeader {
+        padding: 2.5% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftSection,
+        .rightSection {
+          gap: 16px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .outletName {
+            font-size: 24px;
+          }
+
+          .distance {
+            font-size: 18px;
+            margin-right: 8px;
+          }
+
+          .avatar {
+            width: 100px;
+            height: 100px;
+            padding: 7.5%;
+          }
+        }
+      }
+
+      .carousel {
+        width: 100%;
+        padding-bottom: 2.5%;
+        position: relative;
+      }
+    }
+  }
+}

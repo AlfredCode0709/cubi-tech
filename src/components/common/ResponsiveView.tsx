@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import { Fragment, ReactNode } from "react";
+import { FC, Fragment, ReactNode } from "react";
 
 interface ResponsiveViewProps {
   desktop: ReactNode;
@@ -8,12 +8,12 @@ interface ResponsiveViewProps {
   mobileClassName?: string;
 }
 
-const ResponsiveView = ({
+const ResponsiveView: FC<ResponsiveViewProps> = ({
   desktop,
   mobile,
   desktopClassName,
   mobileClassName,
-}: ResponsiveViewProps) => (
+}) => (
   <Fragment>
     <Box
       className={desktopClassName}

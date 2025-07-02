@@ -53,6 +53,18 @@
   }
 }
 
+/* Starting block 2 styles */
+.startingBlock2 {
+  background: var(--bgImage) var(--bgPosition) / cover no-repeat;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin-top: -80px;
+}
+
 /* Mission Statement styles */
 .missionStatement {
   background: var(--primary-main);
@@ -78,6 +90,30 @@
     .text {
       font-size: 24px;
       text-align: left;
+    }
+  }
+}
+
+/* Brand Slogan styles */
+.brandSlogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 15vh;
+  color: var(--color);
+
+  .text {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    font-style: italic;
+    line-height: var(--h5);
+  }
+
+  @media (min-width: 900px) {
+    .text {
+      font-size: 32px;
     }
   }
 }
@@ -156,6 +192,212 @@
     &:disabled {
       background: transparent;
       color: var(--disable-main);
+    }
+  }
+}
+
+/* Category styles */
+.category {
+  color: var(--color);
+  text-align: center;
+
+  .avatar {
+    background: var(--bgColor);
+  }
+
+  .name {
+    margin-top: 10px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 899px) {
+    .avatar {
+      width: 50px;
+      height: 50px;
+    }
+
+    .name {
+      font-size: 10px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+
+    .name {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Sort Filter styles */
+.sortFilter {
+  background: #e9e9e9;
+
+  :global(.MuiInputLabel-root:active),
+  :global(.MuiInputLabel-root.Mui-focused) {
+    color: var(--selectThemeColor);
+  }
+
+  :global(.MuiOutlinedInput-root:hover) fieldset,
+  :global(.MuiOutlinedInput-root.Mui-focused) fieldset {
+    border-color: var(--selectThemeColor);
+  }
+
+  :global(.MuiSelect-root) {
+    background: var(--white);
+  }
+
+  .actionOptions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .resetButton,
+  .clearButton {
+    color: var(--buttonColor);
+
+    &:hover {
+      background: var(--hover1Color);
+    }
+  }
+
+  .sortButton,
+  .applyButton {
+    background: var(--buttonColor);
+
+    &:hover {
+      background: var(--hover2Color);
+    }
+
+    &:disabled {
+      background: var(--divider-color);
+      color: var(--disable-main);
+    }
+  }
+
+  @media (max-width: 899px) {
+    .actionOptions {
+      gap: 8px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .actionOptions {
+      gap: 16px;
+    }
+  }
+}
+
+.sortFilterMobileDialogPaper {
+  width: 100% !important;
+  height: 75vh !important;
+  max-height: 75vh !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+
+  .sortFilterMobileDialogTitle {
+    font-weight: 600;
+  }
+
+  .sortFilterMobileFormControl {
+    padding-bottom: 5%;
+    border-bottom: 1px solid var(--divider-color);
+
+    .sortFilterMobileFormLabel {
+      font-weight: 500;
+      margin-bottom: 2.5%;
+    }
+  }
+
+  .sortFilterDialogActions {
+    padding: 5%;
+
+    .actionOptions {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+
+      .clearButton {
+        color: var(--buttonColor);
+
+        &:hover {
+          background: var(--hover1Color);
+        }
+      }
+
+      .applyButton {
+        background: var(--buttonColor);
+
+        &:hover {
+          background: var(--hover2Color);
+        }
+
+        &:disabled {
+          background: var(--divider-color);
+          color: var(--disable-main);
+        }
+      }
+    }
+  }
+}
+
+.sortFilterMobileDialogContainer {
+  align-items: flex-start !important;
+}
+
+/* Sorted and Filtered Catalogue styles */
+.sortedAndFilteredCatalogue {
+  color: var(--titleColor);
+  border-top: 1px solid var(--divider-color);
+
+  .title {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: var(--h3);
+  }
+
+  @media (max-width: 899px) {
+    .title {
+      font-size: 18px;
+    }
+
+    .carousel {
+      padding: 7.5% 0 5%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .header {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      // background: lightskyblue;
+
+      .title {
+        font-size: 26px;
+      }
+    }
+
+    .resultsView {
+      padding: 2.5% 0;
     }
   }
 }
