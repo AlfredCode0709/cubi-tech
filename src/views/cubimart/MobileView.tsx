@@ -1,15 +1,15 @@
+import BargainBlitz from "@/components/cubimart/bargainBlitz/BargainBlitz";
 import BrandSlogan from "@/components/common/BrandSlogan";
 import Category from "@/components/common/category/Category";
-import NearbyOutlets from "@/components/cubifood/nearbyOutlets/NearbyOutlets";
 import Promotions from "@/components/common/promotions/Promotions";
 import SortFilter from "@/components/common/sortFilter/SortFilter";
 import SortedAndFilterCatalogue from "@/components/common/sortedAndFilteredCatalogue/SortedAndFilteredCatalogue";
+import StoreCatalogue from "@/components/cubimart/storeCatalogue/StoreCatalogue";
 import StartingBlock2 from "@/components/common/startingBlocks/StartingBlock2";
-import Treasures from "@/components/cubifood/treasures/Treasures";
-import { categories } from "@/components/cubifood/categories";
+import { categories } from "@/components/cubimart/categories";
 import { FC, Fragment, useState } from "react";
 
-const defaultIcon = "https://ik.imagekit.io/a1fr3d10/cubifood_light.svg";
+const defaultIcon = "https://ik.imagekit.io/a1fr3d10/cubimart_light.svg";
 const filteredIcon = "https://ik.imagekit.io/a1fr3d10/filtered_icon.svg";
 
 const MobileView: FC = () => {
@@ -34,16 +34,16 @@ const MobileView: FC = () => {
 
   return (
     <Fragment>
-      {/* Starting block of CubiFood Page */}
+      {/* Starting block of CubiMart Page */}
       <StartingBlock2
-        bgImage={"https://ik.imagekit.io/a1fr3d10/mobile/cubifood/block1.png"}
+        bgImage={"https://ik.imagekit.io/a1fr3d10/mobile/cubimart/block1.png"}
       />
 
-      {/* CubiFood slogan block */}
-      <BrandSlogan color={"#08834e"}>
-        Eat Smart. Pay Easy.
+      {/* CubiMart slogan block */}
+      <BrandSlogan color={"#c03853"}>
+        Shop the Beat
         <br />
-        Enjoy Every Bite.
+        of Your Life!
       </BrandSlogan>
 
       {/* Promotions */}
@@ -51,21 +51,21 @@ const MobileView: FC = () => {
         header={"Weekly Promotions"}
         title={"Promotion Name"}
         descr={"Description"}
-        bgColor={"#e7fef4"}
-        color={"#08834e"}
+        bgColor={"#f9ebee"}
+        color={"#c03853"}
         image={defaultIcon}
       />
 
-      {/* Treasures */}
-      <Treasures />
+      {/* Bargain Blitz */}
+      <BargainBlitz totalItems={18} />
 
-      {/* CUBIFood Category */}
+      {/* CUBIMart Category */}
       <Category
         categories={categories}
         selectedCategory={selectedCategory}
         onCategorySelect={handleCategorySelect}
-        primaryColor={"#08834e"}
-        bgColor={"#e7fef4"}
+        primaryColor={"#c03853"}
+        bgColor={"#f9ebee"}
       />
 
       {/* Sort Filter */}
@@ -85,10 +85,10 @@ const MobileView: FC = () => {
           key={imageSrc}
           imageSrc={imageSrc}
           numberOfItems={12}
-          brand={"CubiFood"}
+          brand={"CubiMart"}
         />
       ) : (
-        <NearbyOutlets numberOfStalls={10} />
+        <StoreCatalogue numberOfStores={18} />
       )}
     </Fragment>
   );

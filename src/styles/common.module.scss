@@ -196,6 +196,29 @@
   }
 }
 
+.paginationColour3 {
+  :global(.MuiPaginationItem-root) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-weight: 500;
+  }
+
+  :global(.MuiPaginationItem-previousNext) {
+    color: var(--white);
+    &:hover {
+      background: var(--white);
+      color: #c03853;
+    }
+    &:disabled {
+      background: transparent;
+      color: #8a283c;
+    }
+  }
+}
+
 /* Category styles */
 .category {
   color: var(--color);
@@ -389,7 +412,6 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      // background: lightskyblue;
 
       .title {
         font-size: 26px;

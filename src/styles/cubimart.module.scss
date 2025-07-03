@@ -1,0 +1,79 @@
+/* Bargain Blitz styles */
+.bargainBlitz {
+  background: #c03853;
+  color: var(--white);
+
+  .title {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: var(--h5);
+  }
+
+  @media (max-width: 899px) {
+    .title {
+      font-size: 18px;
+    }
+
+    .carousel {
+      padding: 7.5% 0 5%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .header {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .title {
+        font-size: 26px;
+      }
+    }
+
+    .catalogue {
+      padding: 2.5% 0;
+    }
+  }
+}
+
+/* Store Catalogue styles */
+.storeCatalogue {
+  color: #c03853;
+  border-top: 1px solid var(--divider-color);
+
+  .title {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: var(--h3);
+  }
+
+  @media (max-width: 899px) {
+    .title {
+      font-size: 18px;
+    }
+
+    .carousel {
+      padding: 7.5% 0 5%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .header {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .title {
+        font-size: 26px;
+      }
+    }
+
+    .catalogue {
+      padding: 2.5% 0;
+    }
+  }
+}
